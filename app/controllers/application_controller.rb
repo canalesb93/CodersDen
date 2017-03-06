@@ -18,6 +18,11 @@ class ApplicationController < ActionController::Base
     store_location_for(:user, request.url)
   end
 
+  def after_sign_in_path_for(resource_or_scope)
+    root_path
+  end
+
+
   def after_sign_out_path_for(resource)
     stored_location_for(:user) || root_path
   end
