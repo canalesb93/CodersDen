@@ -15,17 +15,30 @@ System was developed using:
 - Sass for styling
 - PostgreSQL database
 
+### Development
+When working with the *Thredded* engine, you may want to modify/override some thredded views or controllers. To override these files you must copy them from the gem engine project into the actual project. Using this command you can copy files to the necessary folder in the project.
+
+Run inside project folder. Specify folder location and file name. In this example, we copy the _post.html.erb partial into the project.
+
+```{r, engine='bash', count_lines}
+mkdir -p app/views/thredded/users/ && cp "$(bundle show thredded)/$_/_post.html.erb" "$_"
+```
+
+You can view the thredded project directory at [GitHub](https://github.com/thredded/thredded). 
+
 ### Configuration
 _Pending_
 
 ### Database creation
 In a terminal, inside the project folder run:
+
 ```{r, engine='bash', count_lines}
 rake db:create
 ```
 
 ### Database initialization
 In a terminal, inside the project folder run:
+
 ```{r, engine='bash', count_lines}
 rake db:migrate
 ```
