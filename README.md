@@ -1,10 +1,16 @@
 # Coder's Den
-
+---
 ## Resources:
 - Trello Board: https://trello.com/b/rMUIig9N
 - SRS: http://bit.ly/2lqNQlJ
 
+## Post formatting
+Post formatting uses Markdown
+
+Quick reference: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+
 ## System specifications:
+---
 
 System was developed using:
 
