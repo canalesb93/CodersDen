@@ -6,14 +6,19 @@ admin = User.create!(
     admin: true
 )
 
-messageboard = Thredded::Messageboard.create!(
+messageboardgroup = Thredded::MessageboardGroup.create!(
     name: 'General',
+)
+
+messageboard = Thredded::Messageboard.create!(
+    name: 'Discusión General',
     slug: 'general',
-    description: 'A board is not a board without some posts'
+    description: 'Discusión general sobre la programación competitiva',
+    group: messageboardgroup
 )
 
 Thredded::TopicForm.new(
-    title: 'My first topic',
+    title: 'Example topic',
     content: <<-MARKDOWN,
 Hello **world**! :smile: This first post shows some of the Thredded default post
 formatting functionality.
@@ -57,3 +62,29 @@ TeX Math support (e.g. $$\phi$$) can be enabled by installing the
     user: admin,
     messageboard: messageboard
 ).save
+
+Thredded::Messageboard.create!(
+    name: 'Problemas Competitivos',
+    slug: 'problems',
+    description: 'Lista de problemas competitivos',
+    group: messageboardgroup
+)
+
+
+messageboardgroup = Thredded::MessageboardGroup.create!(
+    name: 'Temas de Programación',
+)
+
+Thredded::Messageboard.create!(
+    name: 'Algoritmos',
+    slug: 'algorithms',
+    description: 'Discusión sobre algoritmos',
+    group: messageboardgroup
+)
+
+Thredded::Messageboard.create!(
+    name: 'Estructuras de Datos',
+    slug: 'data-structures',
+    description: 'Discusión sobre estructuas de datos',
+    group: messageboardgroup
+)
