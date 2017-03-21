@@ -1,0 +1,1 @@
+json.partial! "online_judges/online_judge", online_judge: @online_judge

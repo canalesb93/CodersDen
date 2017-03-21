@@ -3,6 +3,9 @@ es:
     name: Coders Den
   common:
     time_ago: "hace %{time}"
+    edit: "Editar"
+    delete: "Borrar"
+    actions: "Acciones"
   nav:
     edit_my_account: Editar mi cuenta
     forums: :thredded.nav.all_messageboards
@@ -191,3 +194,6 @@ es:
       user_posted_in_topic_html: "%{user_link} escribió en %{topic_link}"
       user_since_html: Usuario desde %{time_ago}
       user_started_topic_html: "%{user_link} empezó %{topic_link}"
+      judge_site: "Sitio"
+      account_name: "Usuario"
+      add_judge_account: "Agregar Cuenta"

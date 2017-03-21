@@ -2,6 +2,8 @@ class User < ApplicationRecord
   validates :display_name, presence: true, uniqueness: true
   before_validation :uniq_display_name!, on: :create
 
+  has_many :online_judges
+
   def display_name=(value)
     super(value ? value.strip : nil)
   end

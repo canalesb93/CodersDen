@@ -1,0 +1,1 @@
+json.array! @online_judges, partial: 'online_judges/online_judge', as: :online_judge

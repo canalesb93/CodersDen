@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Site:</strong>
+  <%= @online_judge.site %>
+</p>
+
+<p>
+  <strong>Account name:</strong>
+  <%= @online_judge.account_name %>
+</p>
+
+<%= link_to 'Edit', edit_online_judge_path(@online_judge) %> |
+<%= link_to 'Back', online_judges_path %>

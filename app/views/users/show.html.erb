@@ -20,6 +20,36 @@
       <li><%= t 'thredded.users.posts_count', count: user_detail.posts_count %></li>
   <% end %>
 </ul>
+
+<h2>Online Judges</h2>
+<table>
+  <thead>
+    <tr>
+      <th><%= t('thredded.users.judge_site') %></th>
+      <th><%= t('thredded.users.account_name') %></th>
+      <% if user == current_user %>
+        <th colspan="2"><%= t('common.actions') %></th>
+      <% end %>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @online_judges.each do |online_judge| %>
+      <tr>
+        <td><%= online_judge.site %></td>
+        <td><%= online_judge.account_name %></td>
+        <% if user == current_user %>
+          <td><%= link_to t('common.edit'), edit_online_judge_path(online_judge) %></td>
+          <td><%= link_to t('common.delete'), online_judge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% if user == current_user %>
+  <%= link_to t('thredded.users.add_judge_account'), new_online_judge_path %>
+<% end %>
+
 <% posts_page = Thredded.posts_page_view(
     scope: user.thredded_posts.order_newest_first.limit(5),
     current_user: current_user) %>

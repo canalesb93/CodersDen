@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Online Judges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Site</th>
+      <th>Account name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @online_judges.each do |online_judge| %>
+      <tr>
+        <td><%= online_judge.site %></td>
+        <td><%= online_judge.account_name %></td>
+        <td><%= link_to 'Show', online_judge %></td>
+        <td><%= link_to 'Edit', edit_online_judge_path(online_judge) %></td>
+        <td><%= link_to 'Destroy', online_judge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Online Judge', new_online_judge_path %>
