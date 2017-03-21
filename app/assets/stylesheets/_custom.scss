@@ -1,3 +1,17 @@
 .thredded--flash-message {
   border: none;
 }
+
+.thredded--post {
+  margin-bottom: 2rem;  
+}
+
+.post {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.app-form-hint {
+  color: rgba(0,0,0,0.54);
+}

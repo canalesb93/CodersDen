@@ -12,6 +12,7 @@
     <li>
       <% button_submitting_text ||=
              post.persisted? ? t('thredded.form.update_btn_submitting') : t('thredded.form.create_btn_submitting') %>
+      
       <button type="submit" class="thredded--form--submit" data-disable-with="<%= button_submitting_text %>">
         <%= button_text %>
       </button>

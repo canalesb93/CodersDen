@@ -5,4 +5,5 @@
       <%= form.text_area :content, {rows: 5, required: true} %>
       <%= render 'thredded/posts_common/form/after_content', form: form %>
   <% end %>
+  <div align=right class="app-form-hint">Markdown<a href="https://kramdown.gettalong.org/quickref.html" target="_blank"> <%= t('common.quick_reference') %></a>.</div>
 </li>

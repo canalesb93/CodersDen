@@ -6,6 +6,7 @@ es:
     edit: "Editar"
     delete: "Borrar"
     actions: "Acciones"
+    quick_reference: "referencia"
   nav:
     edit_my_account: Editar mi cuenta
     forums: :thredded.nav.all_messageboards
