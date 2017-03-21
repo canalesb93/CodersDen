@@ -175,6 +175,7 @@ es:
       unfollow: Deja de seguir
       unfollowed_notice: Has dejado de seguir este tema
       updated_notice: Tema actualizado
+      add_post: Agregar comentario
     users:
       currently_online: En línea
       last_active_html: Última vez activo hace %{time_ago}
