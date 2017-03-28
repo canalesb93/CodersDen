@@ -43,7 +43,7 @@ class OnlineJudgesController < ApplicationController
   def update
     respond_to do |format|
       if @online_judge.update(online_judge_params)
-        format.html { redirect_to @online_judge, notice: 'Online judge was successfully updated.' }
+        format.html { redirect_to current_user, notice: 'Online judge was successfully updated.' }
         format.json { render :show, status: :ok, location: @online_judge }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class OnlineJudgesController < ApplicationController
   def destroy
     @online_judge.destroy
     respond_to do |format|
-      format.html { redirect_to online_judges_url, notice: 'Online judge was successfully destroyed.' }
+      format.html { redirect_to current_user, notice: 'Online judge was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

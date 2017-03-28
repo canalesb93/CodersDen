@@ -22,31 +22,36 @@
 </ul>
 
 <h2>Online Judges</h2>
-<table>
-  <thead>
-    <tr>
-      <th><%= t('thredded.users.judge_site') %></th>
-      <th><%= t('thredded.users.account_name') %></th>
-      <% if user == current_user %>
-        <th colspan="2"><%= t('common.actions') %></th>
-      <% end %>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @online_judges.each do |online_judge| %>
+<% if @online_judges.length > 0 %>
+  <table style="width: 100%;">
+    <thead>
       <tr>
-        <td><%= online_judge.site %></td>
-        <td><%= online_judge.account_name %></td>
+        <th><%= t('thredded.users.judge_site') %></th>
+        <th><%= t('thredded.users.account_name') %></th>
         <% if user == current_user %>
-          <td><%= link_to t('common.edit'), edit_online_judge_path(online_judge) %></td>
-          <td><%= link_to t('common.delete'), online_judge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <th colspan="2"><%= t('common.actions') %></th>
         <% end %>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @online_judges.each do |online_judge| %>
+        <tr>
+          <td><%= online_judge.site %></td>
+          <td><%= online_judge.account_name %></td>
+          <% if user == current_user %>
+            <td><%= link_to t('common.edit'), edit_online_judge_path(online_judge) %></td>
+            <td><%= link_to t('common.delete'), online_judge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
 <% if user == current_user %>
+  <% if @online_judges.length == 0 %>
+    <p><%= t('thredded.users.no_judges') %></p>
+  <% end %>
   <%= link_to t('thredded.users.add_judge_account'), new_online_judge_path %>
 <% end %>
 

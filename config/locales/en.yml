@@ -8,3 +8,23 @@ en:
     forums: :thredded.nav.all_messageboards
     sign_in: :devise.shared.links.sign_in
     sign_out: Sign out
+  simple_form:
+    labels:
+      online_judge:
+        site: Site
+        account_name: Account Name
+    placeholders:
+      online_judge:
+        site: http://coj.uci.cu/
+        account_name: frankr
+  helpers:
+    submit:
+      online_judge:
+        create: "Add %{model}"
+        update: "Save Changes"
+  thredded:
+    users:
+      judge_site: "Site"
+      account_name: "Account Name"
+      add_judge_account: "Add Account"
+      no_judges: "You don't have any online judge account."

@@ -198,3 +198,18 @@ es:
       judge_site: "Sitio"
       account_name: "Usuario"
       add_judge_account: "Agregar Cuenta"
+      no_judges: "No tienes ninguna juez agregado."
+  simple_form:
+    labels:
+      online_judge:
+        site: Sitio
+        account_name: Nombre de cuenta
+    placeholders:
+      online_judge:
+        site: http://coj.uci.cu/
+        account_name: frankr
+  helpers:
+    submit:
+      online_judge:
+        create: "Agregar %{model}"
+        update: "Actualizar cambios"
