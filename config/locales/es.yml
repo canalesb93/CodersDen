@@ -66,6 +66,7 @@ es:
     nav:
       all_messageboards: Todos los Foros
       edit_messageboard: Editar Foro
+      reply_post: Responder Mensaje
       edit_post: Editar Mensaje
       edit_private_topic: :thredded.nav.edit_topic
       edit_topic: Editar

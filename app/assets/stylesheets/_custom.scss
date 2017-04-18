@@ -15,3 +15,16 @@
 .app-form-hint {
   color: rgba(0,0,0,0.54);
 }
+
+.thredded--post--edit,
+.thredded--post--delete {
+  margin-left: 0.5rem;
+}
+
+.thredded--post--reply {
+  font-size: $thredded-font-size-small;
+  @extend %thredded--link;
+  @media print {
+    display: none;
+  }
+}

@@ -28,3 +28,6 @@ en:
       account_name: "Account Name"
       add_judge_account: "Add Account"
       no_judges: "You don't have any online judge account."
+    nav:
+      reply_post: "Reply to Message"
+

@@ -1,3 +1,7 @@
+<% if current_user %>
+  <a class="thredded--post--reply" href=""><%= t('thredded.nav.reply_post') %></a>
+<% end %>
+
 <% if post.can_update? %>
   <%= link_to t('thredded.posts.edit'), post.edit_path, class: 'thredded--post--edit' %>
 <% end %>
