@@ -13,10 +13,6 @@ en:
       online_judge:
         site: Site
         account_name: Account Name
-    placeholders:
-      online_judge:
-        site: http://coj.uci.cu/
-        account_name: frankr
   helpers:
     submit:
       online_judge:

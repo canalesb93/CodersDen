@@ -1,12 +1,6 @@
 class OnlineJudgesController < ApplicationController
   before_action :set_online_judge, only: [:show, :edit, :update, :destroy]
 
-  # GET /online_judges
-  # GET /online_judges.json
-  def index
-    @online_judges = OnlineJudge.all
-  end
-
   # GET /online_judges/1
   # GET /online_judges/1.json
   def show

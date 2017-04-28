@@ -35,15 +35,38 @@
     </thead>
 
     <tbody>
-      <% @online_judges.each do |online_judge| %>
-        <tr>
-          <td><%= online_judge.site %></td>
-          <td><%= online_judge.account_name %></td>
-          <% if user == current_user %>
-            <td><%= link_to t('common.edit'), edit_online_judge_path(online_judge) %></td>
-            <td><%= link_to t('common.delete'), online_judge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% @online_judges.each do |oj| %>
+        <% if oj["online_judge"] != nil %>
+
+          <tr class="<%= oj["problems"] != nil ? 'no-border' : '' %>">
+            <td><%= oj["online_judge"].site %></td>
+            <td>
+              <% if oj['user'] != nil %>
+                <a href="<%= oj['user'] %>">
+                  <u><%= oj["online_judge"].account_name %></u>
+                </a>
+              <% else %>
+                  <u><%= oj["online_judge"].account_name %></u>
+              <% end %>
+            </td>
+            <% if user == current_user %>
+              <td><%= link_to t('common.edit'), edit_online_judge_path(oj["online_judge"]) %></td>
+              <td><%= link_to t('common.delete'), oj["online_judge"], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+          </tr>
+          <% if oj["problems"] != nil %>
+            <tr>
+              <td style="text-align: center;" colspan="4">
+                <% oj['problems'].each do |problem| %>
+                  <a href="<%= problem['href'] %>"><%= problem["number"] %></a>
+                  <span><%= problem != oj['problems'].last ? ' • ' : '' %></span>
+                <% end %>
+              </td>
+            </tr>
           <% end %>
-        </tr>
+        <% end %>
+
+        
       <% end %>
     </tbody>
   </table>

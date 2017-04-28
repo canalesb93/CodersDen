@@ -205,10 +205,6 @@ es:
       online_judge:
         site: Sitio
         account_name: Nombre de cuenta
-    placeholders:
-      online_judge:
-        site: http://coj.uci.cu/
-        account_name: frankr
   helpers:
     submit:
       online_judge:

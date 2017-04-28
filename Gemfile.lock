@@ -52,6 +52,8 @@ GEM
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
     bcrypt (3.1.11)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     builder (3.2.3)
     byebug (9.0.6)
     capybara (2.12.0)
@@ -316,6 +318,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  binding_of_caller
   byebug
   capybara
   coffee-rails (~> 4.2)
