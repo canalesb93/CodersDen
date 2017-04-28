@@ -1,4 +1,4 @@
-<% if current_user %>
+<% if current_user && !current_page?('/users/'+current_user.id.to_s)%>
   <a class="thredded--post--reply" href=""><%= t('thredded.nav.reply_post') %></a>
 <% end %>
 
