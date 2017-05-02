@@ -1,15 +1,18 @@
 //= require locales/jquery.timeago.es
 //= require thredded
 
-$( ".thredded--post--reply" ).click(function( event ) {
-  event.preventDefault();
+$(document).on('turbolinks:load', function() {
 
-  // Name Query
-  var nameElement = $(this).prevAll("header").children(".thredded--post--user").children("a")[0];
+  $( ".thredded--post--reply" ).click(function( event ) {
+    event.preventDefault();
 
-  var reply = "@" + nameElement.text + " " + $("#post_content").val();
+    // Name Query
+    var nameElement = $(this).prevAll("header").children(".thredded--post--user").children("a")[0];
 
-  $("#post_content").focus().val(reply);
-  $("#post_content").change()
+    var reply = "@" + nameElement.text + " " + $("#post_content").val();
 
+    $("#post_content").focus().val(reply);
+    $("#post_content").change()
+
+  });
 });
